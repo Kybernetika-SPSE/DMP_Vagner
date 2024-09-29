@@ -75,9 +75,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "Gerb/")
 		)
 	)
 	(net 0 "")
@@ -2809,7 +2809,7 @@
 		(descr "Mounting Hole 2.2mm, M2")
 		(tags "mounting hole 2.2mm m2")
 		(property "Reference" "H1"
-			(at 0 -3.2 360)
+			(at 0 -3.2 0)
 			(layer "F.SilkS")
 			(uuid "f2a4fcd8-f198-4419-94be-e2b9d1d527cd")
 			(effects
@@ -2820,7 +2820,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad_MP"
-			(at 0 3.2 360)
+			(at 0 3.2 0)
 			(layer "F.Fab")
 			(uuid "a84cff61-66ec-4223-a3fb-626917296d80")
 			(effects
@@ -2897,7 +2897,7 @@
 			(uuid "20b8f8b5-29b3-4097-b66c-0b8188a58a68")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "bf27428e-8240-4caf-ab77-922317e3b936")
 			(effects
@@ -3454,7 +3454,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C11"
-			(at 3.175 0 360)
+			(at 3.175 0 0)
 			(layer "F.SilkS")
 			(uuid "e345d4f2-f7b9-4ac8-a01f-3decf402c819")
 			(effects
@@ -3465,7 +3465,7 @@
 			)
 		)
 		(property "Value" "u1F"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "cbf8eded-fdcc-49c4-bc64-9f6e26c13bdd")
 			(effects
@@ -3620,7 +3620,7 @@
 			(uuid "e0e59616-2738-4250-91bc-a4a6612fc0d9")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "f9d24fc7-8c39-47b9-b26a-6c764a7d7666")
 			(effects
