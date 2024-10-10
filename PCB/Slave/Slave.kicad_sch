@@ -11347,20 +11347,19 @@
 		(dnp no)
 		(uuid "0b217ff1-9fbd-4923-8cbf-c6eb8e4b480a")
 		(property "Reference" "C5"
-			(at 86.9935 152.2437 90)
+			(at 92.964 153.416 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "0u1F"
-			(at 83.1835 152.2437 90)
+		(property "Value" "100nF"
+			(at 91.186 156.718 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
@@ -11912,8 +11911,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "u1F"
-			(at 325.12 45.212 0)
+		(property "Value" "100nF"
+			(at 323.088 45.212 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12183,7 +12182,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0u1F"
+		(property "Value" "100nF"
 			(at 217.297 200.406 0)
 			(effects
 				(font
@@ -12318,7 +12317,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0u1F"
+		(property "Value" "100nF"
 			(at 42.164 128.016 0)
 			(effects
 				(font
@@ -14595,7 +14594,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0u1F"
+		(property "Value" "100nF"
 			(at 59.182 160.782 0)
 			(effects
 				(font
@@ -15026,7 +15025,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0u1F"
+		(property "Value" "100nF"
 			(at 84.074 128.016 0)
 			(effects
 				(font
@@ -16048,7 +16047,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 366.776 179.578 0)
+			(at 367.792 182.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17142,7 +17141,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0u1F"
+		(property "Value" "100nF"
 			(at 364.744 178.816 0)
 			(effects
 				(font
