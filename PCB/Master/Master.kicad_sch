@@ -5,7 +5,7 @@
 	(uuid "2e817cb2-1c19-4def-9379-302a7f4d7685")
 	(paper "A3")
 	(lib_symbols
-		(symbol "BMP280:BMP280"
+		(symbol "BME280:BME280"
 			(pin_names
 				(offset 1.016)
 			)
@@ -13,7 +13,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -10.1796 7.6347 0)
+				(at -10.1662 13.3431 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -21,8 +21,8 @@
 					(justify left bottom)
 				)
 			)
-			(property "Value" "BMP280"
-				(at -10.1693 -10.1693 0)
+			(property "Value" "BME280"
+				(at -10.1683 -15.2524 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -30,7 +30,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" "BMP280:XDCR_BMP280"
+			(property "Footprint" "BME280:PSON65P250X250X100-8N"
 				(at 0 0 0)
 				(effects
 					(font
@@ -68,7 +68,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description_1" "\nPressure Sensor 4.35PSI ~ 15.95PSI (30kPa ~ 110kPa) Absolute - 16b 8-SMD\n"
+			(property "DESCRIPTION" "Integrated pressure, humidity and temperature sensor; 8-pin 2.5x2.5x0.93mm LGA"
 				(at 0 0 0)
 				(effects
 					(font
@@ -78,7 +78,77 @@
 					(hide yes)
 				)
 			)
-			(property "Package" "SMD-8 Bosch Sensortec"
+			(property "PACKAGE" "LGA-8 Bosch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PRICE" "4.94 USD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Package" "LGA-8 Bosch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Check_prices" "https://www.snapeda.com/parts/BME280/Bosch+Sensortec/view-part/?ref=eda"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "IPC-7351B"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/BME280/Bosch+Sensortec/view-part/?ref=snap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MP" "BME280"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=49769&manufacturer=Bosch&part_name=BME280&search_term=None"
 				(at 0 0 0)
 				(effects
 					(font
@@ -98,56 +168,6 @@
 					(hide yes)
 				)
 			)
-			(property "Check_prices" "https://www.snapeda.com/parts/BMP280/Bosch+Sensortec/view-part/?ref=eda"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "PART_REV" "1.19"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "STANDARD" "MANUFACTURER RECOMMENDATIONS"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "SnapEDA_Link" "https://www.snapeda.com/parts/BMP280/Bosch+Sensortec/view-part/?ref=snap"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MP" "BMP280"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
 			(property "Availability" "In Stock"
 				(at 0 0 0)
 				(effects
@@ -158,7 +178,7 @@
 					(hide yes)
 				)
 			)
-			(property "MANUFACTURER" "Bosch"
+			(property "AVAILABILITY" "Good"
 				(at 0 0 0)
 				(effects
 					(font
@@ -168,12 +188,22 @@
 					(hide yes)
 				)
 			)
-			(symbol "BMP280_0_0"
+			(property "Description_1" "\nBoard Mount Humidity Sensors MEMS humidity, pressure and temperature sensor\n"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "BME280_0_0"
 				(rectangle
-					(start -10.16 -7.62)
-					(end 10.16 7.62)
+					(start -10.16 -12.7)
+					(end 10.16 12.7)
 					(stroke
-						(width 0.254)
+						(width 0.4064)
 						(type default)
 					)
 					(fill
@@ -181,8 +211,8 @@
 					)
 				)
 				(pin power_in line
-					(at 12.7 -5.08 180)
-					(length 2.54)
+					(at 15.24 -10.16 180)
+					(length 5.08)
 					(name "GND"
 						(effects
 							(font
@@ -199,8 +229,8 @@
 					)
 				)
 				(pin input line
-					(at -12.7 5.08 0)
-					(length 2.54)
+					(at -15.24 2.54 0)
+					(length 5.08)
 					(name "CSB"
 						(effects
 							(font
@@ -217,8 +247,8 @@
 					)
 				)
 				(pin bidirectional line
-					(at -12.7 2.54 0)
-					(length 2.54)
+					(at -15.24 -2.54 0)
+					(length 5.08)
 					(name "SDI"
 						(effects
 							(font
@@ -235,8 +265,8 @@
 					)
 				)
 				(pin input clock
-					(at -12.7 -2.54 0)
-					(length 2.54)
+					(at -15.24 0 0)
+					(length 5.08)
 					(name "SCK"
 						(effects
 							(font
@@ -253,8 +283,8 @@
 					)
 				)
 				(pin bidirectional line
-					(at -12.7 0 0)
-					(length 2.54)
+					(at -15.24 -5.08 0)
+					(length 5.08)
 					(name "SDO"
 						(effects
 							(font
@@ -271,8 +301,8 @@
 					)
 				)
 				(pin power_in line
-					(at 12.7 2.54 180)
-					(length 2.54)
+					(at 15.24 10.16 180)
+					(length 5.08)
 					(name "VDDIO"
 						(effects
 							(font
@@ -289,8 +319,8 @@
 					)
 				)
 				(pin power_in line
-					(at 12.7 -5.08 180)
-					(length 2.54)
+					(at 15.24 -10.16 180)
+					(length 5.08)
 					(name "GND"
 						(effects
 							(font
@@ -307,8 +337,8 @@
 					)
 				)
 				(pin power_in line
-					(at 12.7 5.08 180)
-					(length 2.54)
+					(at 15.24 7.62 180)
+					(length 5.08)
 					(name "VDD"
 						(effects
 							(font
@@ -6380,6 +6410,12 @@
 		(uuid "055a0fc1-efb3-4e94-be60-e53a5af5798c")
 	)
 	(junction
+		(at 127 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "076976a5-4bc0-4e12-bc86-fd7ad7673f01")
+	)
+	(junction
 		(at 373.38 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6404,6 +6440,12 @@
 		(uuid "13756ac8-4b35-4383-b690-9af73de6eb67")
 	)
 	(junction
+		(at 130.81 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1be5721b-8d92-49d5-b7dc-0027119d9956")
+	)
+	(junction
 		(at 80.01 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6414,12 +6456,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1eb43c57-6e05-4dce-9340-52e8112ebe91")
-	)
-	(junction
-		(at 166.37 140.9001)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "292f271c-0f8a-47d2-8d9a-f4bc02028575")
 	)
 	(junction
 		(at 226.06 36.83)
@@ -6500,12 +6536,6 @@
 		(uuid "44773ecb-5e4e-4786-9c3f-b1c3fb7c3983")
 	)
 	(junction
-		(at 160.7115 140.9001)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4880c4f1-ec0a-4c24-aa6d-7f85705165dc")
-	)
-	(junction
 		(at 99.06 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6554,12 +6584,6 @@
 		(uuid "69b9af53-845b-4ce1-b0ac-e8bab2934bb0")
 	)
 	(junction
-		(at 157.48 140.9001)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "69ef5caa-770c-408e-9844-23664e5f1e4d")
-	)
-	(junction
 		(at 389.89 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6584,22 +6608,16 @@
 		(uuid "719fed0a-2157-495b-8186-d3bb440eebac")
 	)
 	(junction
-		(at 157.48 140.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "744c8cd7-0f87-4ea2-90ae-cd3e124f5451")
-	)
-	(junction
 		(at 226.06 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "783e0ba9-0fc0-412d-a554-3ca0b06365fb")
 	)
 	(junction
-		(at 162.56 133.35)
+		(at 130.81 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "78dd3b3c-2781-4785-a8ae-70aec67d7e3e")
+		(uuid "7a9d3730-f3dc-4a11-8113-4e1262ae5d8e")
 	)
 	(junction
 		(at 82.55 116.84)
@@ -6686,12 +6704,6 @@
 		(uuid "af4b2ae2-4531-4fe3-959a-35884b82ccee")
 	)
 	(junction
-		(at 162.56 127)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b200a157-50b4-4d93-856c-712127d29356")
-	)
-	(junction
 		(at 68.58 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6704,10 +6716,28 @@
 		(uuid "b5a2a26f-0a8f-4475-bdf1-4bb90ecb1753")
 	)
 	(junction
+		(at 170.18 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b8992fba-c769-4f41-8add-5518789f54e2")
+	)
+	(junction
+		(at 170.18 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bac0591e-2bb7-46b5-89b3-36ba3a00f502")
+	)
+	(junction
 		(at 35.56 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bcbd40ee-a9fd-49c5-b161-00e379f93c2b")
+	)
+	(junction
+		(at 170.18 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bfdb68eb-9758-4317-af0f-2edf01ac2e96")
 	)
 	(junction
 		(at 80.01 102.87)
@@ -6726,6 +6756,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d24aeb59-a595-4786-9931-ae064ef8efe6")
+	)
+	(junction
+		(at 135.89 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d26bf023-89cb-4222-aa7b-f43901f01d2c")
 	)
 	(junction
 		(at 344.17 38.1)
@@ -6750,12 +6786,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d921614a-8abb-4321-a96b-1ccbf1e05101")
-	)
-	(junction
-		(at 162.56 130.81)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d9cdf2c5-1b52-400b-a662-1f196109f587")
 	)
 	(junction
 		(at 71.12 63.5)
@@ -6786,6 +6816,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7ffa187-35de-431a-bd0a-1ada0c0138f6")
+	)
+	(junction
+		(at 170.18 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eb61a24a-1a21-4319-983d-77168f2b04ac")
 	)
 	(junction
 		(at 35.56 88.9)
@@ -6909,16 +6945,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 138.43) (xy 171.45 140.9001)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "03a15d2a-02f5-42a6-84dc-df816ed41ab9")
-	)
-	(wire
-		(pts
 			(xy 219.71 60.96) (xy 219.71 63.5)
 		)
 		(stroke
@@ -6966,6 +6992,16 @@
 			(type default)
 		)
 		(uuid "093e3a5a-ed11-49ed-abe4-fb728bc69037")
+	)
+	(wire
+		(pts
+			(xy 125.73 143.51) (xy 127 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "094eeebb-619a-4174-8f50-431d26f391a3")
 	)
 	(wire
 		(pts
@@ -7036,16 +7072,6 @@
 			(type default)
 		)
 		(uuid "0cd0b406-5dc7-48e8-bd83-cd49ec2daee5")
-	)
-	(wire
-		(pts
-			(xy 156.21 140.97) (xy 156.21 140.9001)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d2fbd87-70dd-4c64-9315-3ea23d0a82f9")
 	)
 	(wire
 		(pts
@@ -7199,16 +7225,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 127) (xy 162.56 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1e3ab2a8-fdfd-4170-aab2-5a6146c2eaeb")
-	)
-	(wire
-		(pts
 			(xy 278.13 78.74) (xy 278.13 80.01)
 		)
 		(stroke
@@ -7349,6 +7365,16 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 133.35) (xy 170.18 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d2ff141-d619-4fb5-b3a1-520052f01c94")
+	)
+	(wire
+		(pts
 			(xy 165.1 53.34) (xy 166.37 53.34)
 		)
 		(stroke
@@ -7366,6 +7392,16 @@
 			(type default)
 		)
 		(uuid "2e03b402-1dd8-4909-9457-7d392291c29a")
+	)
+	(wire
+		(pts
+			(xy 170.18 143.51) (xy 170.18 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f2848e4-651e-4f51-a397-9bcbc8f37010")
 	)
 	(wire
 		(pts
@@ -7409,13 +7445,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 140.97) (xy 157.48 140.97)
+			(xy 130.81 127) (xy 135.89 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "323b9aad-f6f2-445e-9853-bcf8a283c39e")
+		(uuid "32c838a4-caa0-4d90-8c37-fbee56218df0")
 	)
 	(wire
 		(pts
@@ -7426,6 +7462,16 @@
 			(type default)
 		)
 		(uuid "32d839db-7285-4e75-81ad-9a1521687497")
+	)
+	(wire
+		(pts
+			(xy 175.26 133.35) (xy 175.26 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "343f8369-a7a9-4ef8-9979-73f5f711ddd9")
 	)
 	(wire
 		(pts
@@ -7459,13 +7505,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 133.35) (xy 162.56 133.35)
+			(xy 127 132.08) (xy 127 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3638f225-9280-4549-81f2-9d97bf0ede62")
+		(uuid "399c6f18-771a-4ef4-9d86-f87287d92c66")
 	)
 	(wire
 		(pts
@@ -7536,16 +7582,6 @@
 			(type default)
 		)
 		(uuid "3b49085f-7ed0-4e35-9823-0c36b6859efd")
-	)
-	(wire
-		(pts
-			(xy 162.56 130.81) (xy 171.45 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c0396ad-64a4-4709-83bc-3b3a69bd46af")
 	)
 	(wire
 		(pts
@@ -7689,16 +7725,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 140.97) (xy 157.48 140.9001)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "450dca22-d2bb-4a91-945e-88e3201d0f72")
-	)
-	(wire
-		(pts
 			(xy 74.93 31.75) (xy 74.93 30.48)
 		)
 		(stroke
@@ -7706,26 +7732,6 @@
 			(type default)
 		)
 		(uuid "47065578-0e0e-4e37-ab76-e9a83f3cb66e")
-	)
-	(wire
-		(pts
-			(xy 129.54 138.43) (xy 134.62 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4768e94b-93c0-4b72-aea7-2e76a9a88b54")
-	)
-	(wire
-		(pts
-			(xy 162.56 133.35) (xy 166.37 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47b8f62d-572d-47bc-a257-92a2ad7e4a50")
 	)
 	(wire
 		(pts
@@ -7816,16 +7822,6 @@
 			(type default)
 		)
 		(uuid "507be8f7-8ec8-40e4-949a-258a9a01a5ce")
-	)
-	(wire
-		(pts
-			(xy 134.62 133.35) (xy 129.54 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5092c17a-31ce-4f25-9566-859d80b0c466")
 	)
 	(wire
 		(pts
@@ -7959,6 +7955,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 127) (xy 130.81 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d83844a-0ac9-4ab6-a549-13ca8ac81464")
+	)
+	(wire
+		(pts
 			(xy 276.86 110.49) (xy 280.67 110.49)
 		)
 		(stroke
@@ -8019,6 +8025,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 151.13) (xy 170.18 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "660155b3-9655-4d33-9dac-d204fcc8d1fd")
+	)
+	(wire
+		(pts
 			(xy 229.87 25.4) (xy 229.87 29.21)
 		)
 		(stroke
@@ -8036,6 +8052,16 @@
 			(type default)
 		)
 		(uuid "68105265-9654-48c3-b612-2880fdf99657")
+	)
+	(wire
+		(pts
+			(xy 170.18 127) (xy 171.45 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69c18053-8cdd-4317-999d-6152e17055dd")
 	)
 	(wire
 		(pts
@@ -8209,16 +8235,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 130.81) (xy 162.56 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "79be3b84-713e-4d85-b66b-ba5bdf97f149")
-	)
-	(wire
-		(pts
 			(xy 80.01 102.87) (xy 80.01 109.22)
 		)
 		(stroke
@@ -8266,6 +8282,16 @@
 			(type default)
 		)
 		(uuid "7f9d0259-1ca4-4c11-b5c5-9632ecc3a451")
+	)
+	(wire
+		(pts
+			(xy 125.73 140.97) (xy 130.81 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ff925e7-061c-4bd2-ae8c-c061accda81f")
 	)
 	(wire
 		(pts
@@ -8359,6 +8385,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.89 146.05) (xy 135.89 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88b4ffb2-78be-4f3a-8432-5224e86a8480")
+	)
+	(wire
+		(pts
 			(xy 247.65 85.09) (xy 247.65 87.63)
 		)
 		(stroke
@@ -8376,16 +8412,6 @@
 			(type default)
 		)
 		(uuid "894af1d7-1908-4ada-a664-0bf9c2a529b8")
-	)
-	(wire
-		(pts
-			(xy 162.56 127) (xy 166.37 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89a96ae2-8a36-41c7-8fe6-09ff93071027")
 	)
 	(wire
 		(pts
@@ -8419,16 +8445,6 @@
 	)
 	(wire
 		(pts
-			(xy 160.7115 140.9001) (xy 160.7115 142.1701)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8fd20720-a20f-4221-9abc-7663133cecef")
-	)
-	(wire
-		(pts
 			(xy 57.15 116.84) (xy 57.15 110.49)
 		)
 		(stroke
@@ -8436,6 +8452,16 @@
 			(type default)
 		)
 		(uuid "8fde459d-fabe-481c-8a0b-e1dbbe27f0bd")
+	)
+	(wire
+		(pts
+			(xy 170.18 135.89) (xy 170.18 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91954bf6-8b73-463a-aa74-7db1c5645416")
 	)
 	(wire
 		(pts
@@ -8506,6 +8532,16 @@
 			(type default)
 		)
 		(uuid "99ee45b0-806a-4e3e-bdd6-a1745dfe51c2")
+	)
+	(wire
+		(pts
+			(xy 170.18 127) (xy 170.18 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a08a4bb-9803-4516-8ebc-9766b0243cfc")
 	)
 	(wire
 		(pts
@@ -8619,6 +8655,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 139.7) (xy 127 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a413a44b-b335-4905-9484-0caee648f6ec")
+	)
+	(wire
+		(pts
 			(xy 165.1 60.96) (xy 166.37 60.96)
 		)
 		(stroke
@@ -8626,6 +8672,26 @@
 			(type default)
 		)
 		(uuid "a54c109d-7aa9-4a9a-a3c8-664b806f7bda")
+	)
+	(wire
+		(pts
+			(xy 175.26 151.13) (xy 175.26 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6ab2d62-12d2-4bf0-a358-ed5dad1c4666")
+	)
+	(wire
+		(pts
+			(xy 127 143.51) (xy 135.89 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a72f3d6b-c673-4dcf-a3bd-46be64c7709a")
 	)
 	(wire
 		(pts
@@ -8649,13 +8715,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.7115 140.9001) (xy 166.37 140.9001)
+			(xy 170.18 130.81) (xy 170.18 133.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "aa3d24bd-daad-4e7e-b875-04d22b919aee")
+		(uuid "aaa26966-3a91-432a-bea0-3ed65a9f24b4")
 	)
 	(wire
 		(pts
@@ -8689,16 +8755,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.0415 135.89) (xy 134.62 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae01c36e-0dc2-491d-ac31-a8fdc4382ca8")
-	)
-	(wire
-		(pts
 			(xy 181.61 31.75) (xy 181.61 40.64)
 		)
 		(stroke
@@ -8719,16 +8775,6 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 140.9001) (xy 171.45 140.9001)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b419fe1a-a89c-442a-8ae5-77fbdb606e80")
-	)
-	(wire
-		(pts
 			(xy 359.41 50.8) (xy 388.62 50.8)
 		)
 		(stroke
@@ -8736,6 +8782,16 @@
 			(type default)
 		)
 		(uuid "b444223e-fc2f-4fa5-a443-8cb4fe43380e")
+	)
+	(wire
+		(pts
+			(xy 135.89 138.43) (xy 135.89 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b66963c1-5cbf-47da-a317-72fa906d112d")
 	)
 	(wire
 		(pts
@@ -8799,16 +8855,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 140.97) (xy 156.21 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be3405ef-9044-4780-be89-4af29c50bd45")
-	)
-	(wire
-		(pts
 			(xy 351.79 38.1) (xy 377.19 38.1)
 		)
 		(stroke
@@ -8826,6 +8872,26 @@
 			(type default)
 		)
 		(uuid "bf55d866-0905-4cd9-8d1f-4ab1d619dd19")
+	)
+	(wire
+		(pts
+			(xy 166.37 151.13) (xy 170.18 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfc3826d-7c4c-44b5-9e58-3ee772337708")
+	)
+	(wire
+		(pts
+			(xy 166.37 130.81) (xy 170.18 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c039a961-358a-4ecb-a88f-35b88abec367")
 	)
 	(wire
 		(pts
@@ -8859,16 +8925,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 127) (xy 162.56 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2510045-2553-49f2-be2e-dd642ee2383d")
-	)
-	(wire
-		(pts
 			(xy 321.31 48.26) (xy 327.66 48.26)
 		)
 		(stroke
@@ -8889,13 +8945,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 130.81) (xy 162.56 130.81)
+			(xy 130.81 140.97) (xy 135.89 140.97)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c3469626-8cb1-4f56-a981-822dfd27c02c")
+		(uuid "c38faf1e-7422-4698-8296-0cb1df8db7c5")
 	)
 	(wire
 		(pts
@@ -8969,16 +9025,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 140.9001) (xy 157.48 140.9001)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca44011c-5995-458c-ac6f-a9e573a1b6be")
-	)
-	(wire
-		(pts
 			(xy 250.19 115.57) (xy 254 115.57)
 		)
 		(stroke
@@ -9026,6 +9072,16 @@
 			(type default)
 		)
 		(uuid "d043e450-339f-40ef-9472-34e9eadfc908")
+	)
+	(wire
+		(pts
+			(xy 135.89 127) (xy 170.18 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d14495e9-d698-48cd-aa28-3fd4c4a0b6a6")
 	)
 	(wire
 		(pts
@@ -9129,13 +9185,13 @@
 	)
 	(wire
 		(pts
-			(xy 134.0415 142.1701) (xy 134.0415 135.89)
+			(xy 170.18 133.35) (xy 175.26 133.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "db935822-b959-45a2-b107-0a0eef14765e")
+		(uuid "db93b577-532f-4236-be64-d02fb75ae73c")
 	)
 	(wire
 		(pts
@@ -9166,6 +9222,16 @@
 			(type default)
 		)
 		(uuid "dcf1d940-e035-430a-b159-3ba18e699430")
+	)
+	(wire
+		(pts
+			(xy 170.18 151.13) (xy 175.26 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd0518dc-d5c0-44f1-bae2-30d80e274d10")
 	)
 	(wire
 		(pts
@@ -9279,6 +9345,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 130.81) (xy 130.81 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6e547cc-8aab-440f-9df2-45de9945bb51")
+	)
+	(wire
+		(pts
 			(xy 49.53 156.21) (xy 50.8 156.21)
 		)
 		(stroke
@@ -9306,6 +9382,16 @@
 			(type default)
 		)
 		(uuid "e91cae11-f630-4abd-a9f3-fd8089df056d")
+	)
+	(wire
+		(pts
+			(xy 130.81 138.43) (xy 130.81 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea1e262e-6aab-4616-9f5e-5b2a03547117")
 	)
 	(wire
 		(pts
@@ -9359,16 +9445,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 130.81) (xy 134.62 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "efc99ed1-cfa0-4081-a2f5-73b5e74e5b3f")
-	)
-	(wire
-		(pts
 			(xy 384.81 135.89) (xy 389.89 135.89)
 		)
 		(stroke
@@ -9416,16 +9492,6 @@
 			(type default)
 		)
 		(uuid "f2f09bff-0ff5-4245-9e82-ffcc681ccff0")
-	)
-	(wire
-		(pts
-			(xy 166.37 140.97) (xy 166.37 140.9001)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f379efa7-52d0-471e-afaf-fe5868512f8d")
 	)
 	(wire
 		(pts
@@ -9499,16 +9565,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 140.9001) (xy 160.7115 140.9001)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd0652a4-ae09-43a2-b265-5dc7e0fd1bee")
-	)
-	(wire
-		(pts
 			(xy 203.2 69.85) (xy 203.2 71.12)
 		)
 		(stroke
@@ -9539,7 +9595,7 @@
 	)
 	(rectangle
 		(start 114.3565 119.3101)
-		(end 195.58 153.6001)
+		(end 195.58 183.515)
 		(stroke
 			(width 0.254)
 			(type default)
@@ -9699,7 +9755,7 @@
 		)
 		(uuid "1c25db9d-29eb-4f9a-85c1-414626ce1c0f")
 	)
-	(text "BMP280"
+	(text "BME280"
 		(exclude_from_sim no)
 		(at 124.1355 122.3581 0)
 		(effects
@@ -10197,7 +10253,7 @@
 	)
 	(global_label "VCC_3V3"
 		(shape input)
-		(at 166.37 127 0)
+		(at 171.45 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10207,7 +10263,7 @@
 		)
 		(uuid "40db32f8-d02f-4980-9e73-f02fd79af366")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 177.459 127 0)
+			(at 182.539 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10329,7 +10385,7 @@
 	)
 	(global_label "I2C_SDA"
 		(shape input)
-		(at 129.54 133.35 180)
+		(at 125.73 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10339,7 +10395,7 @@
 		)
 		(uuid "4d145d94-aacb-43c9-9f63-febcc6eeb369")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 118.9348 133.35 0)
+			(at 115.1248 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11121,7 +11177,7 @@
 	)
 	(global_label "I2C_SCK"
 		(shape input)
-		(at 129.54 138.43 180)
+		(at 125.73 140.97 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11131,7 +11187,7 @@
 		)
 		(uuid "b59c822b-993d-4130-8219-3d20c8e568c5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 118.7534 138.43 0)
+			(at 114.9434 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12303,6 +12359,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 170.18 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13d0ccb0-dd8b-48ec-88ec-5e7ee177276a")
+		(property "Reference" "#PWR014"
+			(at 170.18 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 170.18 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8ed7b7e9-9601-4eba-a2dc-64d108d5e440")
+		)
+		(instances
+			(project "Master"
+				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 226.06 40.64 0)
 		(unit 1)
@@ -13248,6 +13370,75 @@
 			(project ""
 				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 130.81 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f5e2c6f-ca6d-4eaa-85bf-638548345cd3")
+		(property "Reference" "R8"
+			(at 132.334 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4k7"
+			(at 132.08 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 129.032 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 130.81 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f585d6c2-1add-464f-9706-b1410e25a10e")
+		)
+		(pin "1"
+			(uuid "5139d269-4772-4f0f-ab79-e41c04dc33a8")
+		)
+		(instances
+			(project ""
+				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -14704,7 +14895,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 171.45 134.62 0)
+		(at 175.26 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14712,7 +14903,7 @@
 		(dnp no)
 		(uuid "71602660-6770-4f14-ae3a-d3c56a348a56")
 		(property "Reference" "C15"
-			(at 174.498 133.35 0)
+			(at 178.308 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14721,7 +14912,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 174.498 135.89 0)
+			(at 178.308 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14730,7 +14921,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 172.4152 138.43 0)
+			(at 176.2252 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14739,7 +14930,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 171.45 134.62 0)
+			(at 175.26 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14748,7 +14939,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 171.45 134.62 0)
+			(at 175.26 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14911,7 +15102,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 166.37 137.16 0)
+		(at 170.18 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14919,7 +15110,7 @@
 		(dnp no)
 		(uuid "7ca737e4-6510-4eb9-ad76-320a988774df")
 		(property "Reference" "C14"
-			(at 160.02 136.144 0)
+			(at 163.83 138.684 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14928,7 +15119,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at 159.512 137.922 0)
+			(at 163.322 140.462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14937,7 +15128,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 167.3352 140.97 0)
+			(at 171.1452 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14946,7 +15137,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 166.37 137.16 0)
+			(at 170.18 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14955,7 +15146,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 166.37 137.16 0)
+			(at 170.18 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14973,6 +15164,233 @@
 			(project ""
 				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
 					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "BME280:BME280")
+		(at 151.13 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "868a4c5e-8933-4bb6-8372-12c65cec5cd8")
+		(property "Reference" "U4"
+			(at 151.13 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BME280"
+			(at 151.13 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "BME280:PSON65P250X250X100-8N"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Bosch"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "DESCRIPTION" "Integrated pressure, humidity and temperature sensor; 8-pin 2.5x2.5x0.93mm LGA"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PACKAGE" "LGA-8 Bosch"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PRICE" "4.94 USD"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "LGA-8 Bosch"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/BME280/Bosch+Sensortec/view-part/?ref=eda"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "IPC-7351B"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/BME280/Bosch+Sensortec/view-part/?ref=snap"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "BME280"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=49769&manufacturer=Bosch&part_name=BME280&search_term=None"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "AVAILABILITY" "Good"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\nBoard Mount Humidity Sensors MEMS humidity, pressure and temperature sensor\n"
+			(at 151.13 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "434a2e25-9fc4-488a-99de-6c92079e2e8c")
+		)
+		(pin "1"
+			(uuid "b176fa46-9958-41a9-949a-dd54c80745e9")
+		)
+		(pin "6"
+			(uuid "0306f3ac-41fc-4627-8ddc-3731db6ffcd1")
+		)
+		(pin "5"
+			(uuid "765f6a26-8870-45a9-a4e8-71cc8b757aa9")
+		)
+		(pin "7"
+			(uuid "4e64f9be-4a4c-4700-8b3e-977d5145dd30")
+		)
+		(pin "2"
+			(uuid "24cf1345-32ad-4908-a89f-83b09747da63")
+		)
+		(pin "8"
+			(uuid "af1a46f1-b24b-4a69-bf8b-5ee12971515e")
+		)
+		(pin "3"
+			(uuid "e5f54006-f7d8-4fcc-ba03-da57380ef4ef")
+		)
+		(instances
+			(project ""
+				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -15491,7 +15909,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "45k"
+		(property "Value" "47k"
 			(at 88.646 108.204 0)
 			(effects
 				(font
@@ -16908,72 +17326,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 134.0415 142.1701 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "df2231e5-0171-466f-acbd-03aba78055e4")
-		(property "Reference" "#PWR022"
-			(at 134.0415 148.5201 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 134.0415 147.2501 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.0415 142.1701 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.0415 142.1701 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 134.0415 142.1701 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "141fb7b5-bf77-4eae-822b-65b6556fea17")
-		)
-		(instances
-			(project "Master"
-				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 270.51 33.02 0)
 		(unit 1)
@@ -17107,72 +17459,6 @@
 			(project "Master"
 				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
 					(reference "C20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 160.7115 142.1701 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e595be74-6f4a-4f88-8b5b-137d8f581b70")
-		(property "Reference" "#PWR021"
-			(at 160.7115 148.5201 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 160.7115 147.2501 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.7115 142.1701 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.7115 142.1701 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 160.7115 142.1701 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "495978f4-6d65-4629-bf9d-5d145288b136")
-		)
-		(instances
-			(project ""
-				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
-					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -18067,203 +18353,6 @@
 		)
 	)
 	(symbol
-		(lib_id "BMP280:BMP280")
-		(at 147.32 135.89 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f4294326-1753-45b5-aae8-be00ac8f932c")
-		(property "Reference" "U5"
-			(at 147.32 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BMP280"
-			(at 147.32 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "BMP280:XDCR_BMP280"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MF" "Bosch"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Description_1" "\nPressure Sensor 4.35PSI ~ 15.95PSI (30kPa ~ 110kPa) Absolute - 16b 8-SMD\n"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Package" "SMD-8 Bosch Sensortec"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Price" "None"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/BMP280/Bosch+Sensortec/view-part/?ref=eda"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "PART_REV" "1.19"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "STANDARD" "MANUFACTURER RECOMMENDATIONS"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/BMP280/Bosch+Sensortec/view-part/?ref=snap"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MP" "BMP280"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" "Bosch"
-			(at 147.32 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "eb541698-9507-4179-bc4c-e55804c06c32")
-		)
-		(pin "3"
-			(uuid "19e276ed-bdf1-4988-a037-64017343fd94")
-		)
-		(pin "2"
-			(uuid "90337eae-9df2-45ec-b9a3-7efaa8295523")
-		)
-		(pin "4"
-			(uuid "374df746-ce39-406a-a11b-4e0f26ecb76c")
-		)
-		(pin "6"
-			(uuid "8921c4f3-d3d2-49d6-8ee0-ace3625de56e")
-		)
-		(pin "8"
-			(uuid "aba2491a-e8a6-4fae-a602-0101068f5d63")
-		)
-		(pin "1"
-			(uuid "11c53d1a-706a-4dca-bcdc-3953829e5eb1")
-		)
-		(pin "5"
-			(uuid "5711a5bf-f8c5-4d62-90ff-498a6e3e39b9")
-		)
-		(instances
-			(project ""
-				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
-					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 267.97 48.26 0)
 		(unit 1)
@@ -18521,6 +18610,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 127 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fa90c9e3-6855-45ac-852b-8960a4efbfbf")
+		(property "Reference" "R9"
+			(at 121.412 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4k7"
+			(at 121.412 137.414 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 125.222 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 127 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 127 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "08b08ca7-cb41-4fca-828d-2e2a58bde7e0")
+		)
+		(pin "1"
+			(uuid "a5eb1fa9-ead2-4fd1-a2be-4722980db15f")
+		)
+		(instances
+			(project "Master"
+				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:1N5819")
 		(at 67.31 30.48 180)
 		(unit 1)
@@ -18583,6 +18741,72 @@
 			(project ""
 				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fcc8ce2b-9acd-4c5f-8514-9de87a285fae")
+		(property "Reference" "#PWR015"
+			(at 135.89 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 135.89 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 135.89 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75bfd086-a281-4c47-bedc-4ea5a2da9a11")
+		)
+		(instances
+			(project ""
+				(path "/2e817cb2-1c19-4def-9379-302a7f4d7685"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
