@@ -58,9 +58,9 @@
           "width": 0.0
         },
         {
-          "gap": 0.4,
+          "gap": 0.6,
           "via_gap": 0.0,
-          "width": 0.4
+          "width": 0.6
         }
       ],
       "drc_exclusions": [
@@ -132,8 +132,7 @@
         "solder_mask_bridge|68595000|45010000|2c0131df-a879-4ddc-9f08-21f916b25fda|444e6a78-5c54-4ad4-9b5d-efa46c3d2ab6",
         "starved_thermal|65795000|44060000|c4426c77-cbf0-420f-b132-269e53580ec5|d2811943-5c6f-4fb4-bc71-9f3893b2af38|F.Cu",
         "starved_thermal|67195000|45460000|c4426c77-cbf0-420f-b132-269e53580ec5|24bc6dbf-df9f-4232-b888-e3a9c5bcb5b3|F.Cu",
-        "starved_thermal|68595000|44060000|c4426c77-cbf0-420f-b132-269e53580ec5|c7b2402a-dc62-45cc-a19c-8de97cd21268|F.Cu",
-        "unconnected_items|67195000|44060000|6c8ae570-bb6c-4206-82aa-cd89cdbe48fb|d2811943-5c6f-4fb4-bc71-9f3893b2af38"
+        "starved_thermal|68595000|44060000|c4426c77-cbf0-420f-b132-269e53580ec5|c7b2402a-dc62-45cc-a19c-8de97cd21268|F.Cu"
       ],
       "meta": {
         "version": 2
@@ -255,6 +254,7 @@
       ],
       "track_widths": [
         0.0,
+        0.15,
         0.3,
         0.4,
         0.6,
@@ -562,9 +562,9 @@
       "plot": "Gerb/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Master.step",
       "svg": "",
-      "vrml": ""
+      "vrml": "Master.wrl"
     },
     "page_layout_descr_file": ""
   },

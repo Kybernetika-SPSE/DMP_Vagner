@@ -59,10 +59,12 @@
         }
       ],
       "drc_exclusions": [
+        "courtyards_overlap|73068001|67965001|408a107b-9d07-415e-8836-cb451b194a32|73731c74-7d69-4ea0-b616-1b1131a65fd1",
         "hole_clearance|35152000|44279000|5691c6fb-3ebc-468c-b1bb-9ddf69bc2df9|51fe82e6-6924-4f7a-b4d7-fb4f0e10a6f6",
         "hole_clearance|35152000|44279000|5691c6fb-3ebc-468c-b1bb-9ddf69bc2df9|f9ff731a-729b-4736-8f41-fb6ba104ff06",
         "hole_clearance|41252000|44279000|5b15f59c-3958-44d2-b2a3-9fbc8921c94d|5dc531ac-6157-4818-83de-b5720f4aae71",
-        "hole_clearance|41252000|44279000|5b15f59c-3958-44d2-b2a3-9fbc8921c94d|c1f4cd6f-d009-49cc-a9d1-a3ecc84b2a0f"
+        "hole_clearance|41252000|44279000|5b15f59c-3958-44d2-b2a3-9fbc8921c94d|c1f4cd6f-d009-49cc-a9d1-a3ecc84b2a0f",
+        "items_not_allowed|73547000|70465000|408a107b-9d07-415e-8836-cb451b194a32|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "version": 2
@@ -186,6 +188,7 @@
         0.0,
         0.3,
         0.4,
+        0.5,
         0.6
       ],
       "tuning_pattern_settings": {
@@ -492,7 +495,7 @@
       "specctra_dsn": "",
       "step": "",
       "svg": "",
-      "vrml": ""
+      "vrml": "Slave.wrl"
     },
     "page_layout_descr_file": ""
   },
