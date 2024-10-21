@@ -37627,7 +37627,7 @@
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "7eb2bd94-2f44-462a-8a7e-4da56a084ec9")
+			(uuid "79e36330-6189-4faa-898f-84c40a8fbad2")
 			(effects
 				(font
 					(size 1.5 1.5)
@@ -37640,7 +37640,7 @@
 			(at 0.75 0 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "e57b8c10-7d73-4c2a-a609-e33a0b01a572")
+			(uuid "646b1056-c39a-43a2-b76b-22a5702d970d")
 			(effects
 				(font
 					(size 1.5 1.5)
@@ -37702,7 +37702,7 @@
 			)
 			(fill solid)
 			(layer "B.SilkS")
-			(uuid "d40d199a-15b5-49fa-8748-c129cee6220c")
+			(uuid "9ff1fa8d-0344-4de6-91fe-b28f0d12ebbf")
 		)
 		(fp_poly
 			(pts
@@ -37717,7 +37717,7 @@
 			)
 			(fill solid)
 			(layer "B.SilkS")
-			(uuid "72aafa7d-d208-4ac5-a233-9caa522eab3f")
+			(uuid "d2de18cf-a3c0-4180-974e-59ffddad287c")
 		)
 		(fp_poly
 			(pts
@@ -37732,7 +37732,7 @@
 			)
 			(fill solid)
 			(layer "B.SilkS")
-			(uuid "a0cdbf43-fa20-44a3-915f-454b26a2a7c6")
+			(uuid "9d478cdc-add9-432c-8adf-0aac0e84545a")
 		)
 		(fp_poly
 			(pts
@@ -37840,7 +37840,7 @@
 			)
 			(fill solid)
 			(layer "B.SilkS")
-			(uuid "b988fdc9-83c1-4b38-be06-43aa01c6b3d3")
+			(uuid "309371ea-d792-40e4-9624-ee6a8f5063f5")
 		)
 	)
 	(footprint "LOGO"
