@@ -51,20 +51,8 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
-      "drc_exclusions": [
-        "courtyards_overlap|73068001|67965001|408a107b-9d07-415e-8836-cb451b194a32|73731c74-7d69-4ea0-b616-1b1131a65fd1",
-        "hole_clearance|35152000|44279000|5691c6fb-3ebc-468c-b1bb-9ddf69bc2df9|51fe82e6-6924-4f7a-b4d7-fb4f0e10a6f6",
-        "hole_clearance|35152000|44279000|5691c6fb-3ebc-468c-b1bb-9ddf69bc2df9|f9ff731a-729b-4736-8f41-fb6ba104ff06",
-        "hole_clearance|41252000|44279000|5b15f59c-3958-44d2-b2a3-9fbc8921c94d|5dc531ac-6157-4818-83de-b5720f4aae71",
-        "hole_clearance|41252000|44279000|5b15f59c-3958-44d2-b2a3-9fbc8921c94d|c1f4cd6f-d009-49cc-a9d1-a3ecc84b2a0f"
-      ],
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -83,7 +71,7 @@
         "footprint": "error",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
-        "hole_clearance": "warning",
+        "hole_clearance": "error",
         "hole_near_hole": "error",
         "holes_co_located": "warning",
         "invalid_outline": "error",
@@ -183,13 +171,7 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [
-        0.0,
-        0.3,
-        0.4,
-        0.5,
-        0.6
-      ],
+      "track_widths": [],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -216,12 +198,7 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        }
-      ],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -454,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Slave.kicad_pro",
+    "filename": "both.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -489,12 +466,12 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "./Gerber/",
+      "plot": "Gerber_Stencil/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
-      "vrml": "Slave.wrl"
+      "vrml": ""
     },
     "page_layout_descr_file": ""
   },
@@ -597,11 +574,6 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [
-    [
-      "96967f59-9d8a-4a15-8889-15969a7856d5",
-      "Root"
-    ]
-  ],
+  "sheets": [],
   "text_variables": {}
 }
