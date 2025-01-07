@@ -469,7 +469,7 @@
       "plot": "Gerber_Stencil/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "both.step",
       "svg": "",
       "vrml": ""
     },

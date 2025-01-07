@@ -492,7 +492,7 @@
       "plot": "./Gerber/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Slave.step",
       "svg": "",
       "vrml": "Slave.wrl"
     },
@@ -600,7 +600,7 @@
   "sheets": [
     [
       "96967f59-9d8a-4a15-8889-15969a7856d5",
-      "Root"
+      "Hlavní"
     ]
   ],
   "text_variables": {}
