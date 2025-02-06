@@ -5,6 +5,6 @@
         "board/esp32s3-builtin.cfg"
     ],
     "idf.toolsPathWin": "C:\\Users\\lukyv\\.espressif",
-    "idf.portWin": "COM16",
+    "idf.portWin": "COM19",
     "idf.flashType": "JTAG"
 }

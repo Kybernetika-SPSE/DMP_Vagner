@@ -9,10 +9,12 @@
 #include "led_strip.h"
 #include "esp_rom_sys.h"
 
+uint8_t slave_id = 1; // Replace 1 with the unique ID for this slave
+
 #define I2C_SLAVE_SCL_IO          39  // GPIO for I2C clock
 #define I2C_SLAVE_SDA_IO          40  // GPIO for I2C data
 #define I2C_SLAVE_NUM             I2C_NUM_0
-#define I2C_SLAVE_ADDRESS         0x55
+#define I2C_SLAVE_ADDRESS         slave_id
 #define I2C_SLAVE_RX_BUF_LEN      512
 #define I2C_SLAVE_TX_BUF_LEN      512
 
@@ -29,11 +31,15 @@
 #define BME280_REG_CTRL_HUM 0xF2
 #define BME280_REG_DATA     0xF7
 
+static bool bme280_connected = false; // Flag to indicate BME280 connection
+int bmeFAIL = 0; // Counter for BME280 failures
+
+
 // I2C Pins
 #define SDA_GPIO 34
 #define SCL_GPIO 48
 
-uint8_t slave_id = 1; // Replace 1 with the unique ID for this slave
+
 
 #define SK6812_PIN                5   // GPIO for SK6812 RGB LED
 
@@ -177,12 +183,18 @@ uint32_t compensate_humidity(int32_t adc_H) {
 
 void bme280_init() {
     uint8_t chip_id;
-    bme280_read_register(BME280_REG_ID, &chip_id, 1);
-    ESP_LOGI(TAG, "BME280 detected with Chip ID: 0x%X", chip_id);
+    esp_err_t err = bme280_read_register(BME280_REG_ID, &chip_id, 1);
+    if (err == ESP_OK && chip_id == 0x60) { // Check for valid BME280 Chip ID
+        ESP_LOGI(TAG, "BME280 detected with Chip ID: 0x%X", chip_id);
+        bme280_connected = true;
 
-    bme280_read_calibration_data();
-    bme280_write_register(BME280_REG_CTRL_HUM, 0x01);  // Humidity oversampling x1
-    bme280_write_register(BME280_REG_CTRL_MEAS, 0x27); // Temperature and Pressure oversampling x1, Mode normal
+        bme280_read_calibration_data();
+        bme280_write_register(BME280_REG_CTRL_HUM, 0x01);  // Humidity oversampling x1
+        bme280_write_register(BME280_REG_CTRL_MEAS, 0x27); // Temp and Pressure oversampling x1, Mode normal
+    } else {
+        ESP_LOGW(TAG, "BME280 not detected! Error: %s", esp_err_to_name(err));
+        bme280_connected = false;
+    }
 }
 
 void configure_gpio_as_output()
@@ -298,13 +310,9 @@ void set_led_color(uint8_t red, uint8_t green, uint8_t blue)
 }
 
 /* I2C Slave Task */
-void i2c_slave_task(void *arg)
-{
+void i2c_slave_task(void *arg) {
     uint8_t buffer[21]; // Header + Slave ID + Data + Footer
     memset(buffer, 0, sizeof(buffer));
-
-    // Define the slave ID
-    
 
     while (1) {
         // Wait for data request from master
@@ -313,16 +321,35 @@ void i2c_slave_task(void *arg)
         if (len > 0) {
             // Read HX711 for weight
             int32_t weight = hx711_read();
-            uint8_t data[8];
-            bme280_read_register(BME280_REG_DATA, data, 8);
 
-            int32_t adc_T = (data[3] << 12) | (data[4] << 4) | (data[5] >> 4);
-            int32_t adc_P = (data[0] << 12) | (data[1] << 4) | (data[2] >> 4);
-            int32_t adc_H = (data[6] << 8) | data[7];
+            int32_t temperature = 0;
+            uint32_t humidity = 0;
+            int32_t pressure = 0;
 
-            int32_t temperature = compensate_temperature(adc_T);
-            uint32_t pressure = compensate_pressure(adc_P);
-            uint32_t humidity = compensate_humidity(adc_H);
+            if (bme280_connected) {
+                uint8_t data[8];
+                bme280_read_register(BME280_REG_DATA, data, 8);
+
+                int32_t adc_T = (data[3] << 12) | (data[4] << 4) | (data[5] >> 4);
+                int32_t adc_P = (data[0] << 12) | (data[1] << 4) | (data[2] >> 4);
+                int32_t adc_H = (data[6] << 8) | data[7];
+
+                temperature = compensate_temperature(adc_T);
+                pressure = compensate_pressure(adc_P);
+                humidity = compensate_humidity(adc_H);
+            } else {
+                
+                ESP_LOGW(TAG, "Skipping BME280 data retrieval as it's not connected.");
+                set_led_color(128, 0, 128); // Purple LED for missing sensor
+                vTaskDelay(pdMS_TO_TICKS(1000));
+                bmeFAIL++;
+                if (bmeFAIL > 5) {
+                    bmeFAIL = 0;
+                    bme280_init(); // Try to reconnect
+                    set_led_color(100, 100, 0);   // Orange LED for ready state
+                }
+                set_led_color(0, 0, 255);   // Blue LED for ready state
+            }
 
             ESP_LOGI(TAG, "Slave ID: %d, Temperature: %.2f °C, Pressure: %.2f hPa, Humidity: %.2f%%, Weight: %.2f g",
                      slave_id, temperature / 100.0, pressure / 100.0, humidity / 1024.0, weight / 100.0);
@@ -348,6 +375,7 @@ void i2c_slave_task(void *arg)
 }
 
 
+
 /* Main Function */
 void app_main(void)
 {
@@ -361,7 +389,7 @@ void app_main(void)
     configure_led();
     set_gpio_high();
     i2c_master_init();
-    //bme280_init();
+    bme280_init();
 
     // Set initial LED state
     set_led_color(255, 0, 0); // Red for startup

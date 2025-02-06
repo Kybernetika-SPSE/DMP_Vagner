@@ -12,12 +12,15 @@
 #include "esp_http_client.h"
 #include "led_strip.h"
 
+#define MAX_HIVE_ID                1
+#define interval                   60000  // Interval between requests in milliseconds
+
 #define I2C_MASTER_SCL_IO          38  // GPIO for I2C clock
 #define I2C_MASTER_SDA_IO          39  // GPIO for I2C data
 #define I2C_MASTER_NUM             I2C_NUM_0
 #define I2C_MASTER_FREQ_HZ         100000
 #define I2C_MASTER_TIMEOUT_MS      1000
-#define I2C_SLAVE_ADDRESS          0x55
+
 
 #define RGB_LED_PIN                42  // GPIO for SK6812 RGB LED
 #define MOSFET_PIN                 45  // GPIO for MOSFET control
@@ -171,50 +174,55 @@ void send_data_to_server(uint8_t slave_id, float temperature, float humidity, in
 }
 
 /* Read Data from Slave */
-void read_from_slave()
+void read_from_slaves()
 {
     uint8_t buffer[21]; // Updated buffer size for slave ID
     memset(buffer, 0, sizeof(buffer));
 
-    set_led_color(0, 0, 255); // Blue: Reading data
+    for (uint8_t slave_id = 0; slave_id <= MAX_HIVE_ID; slave_id++) {
+        ESP_LOGI(TAG, "Trying to communicate with Slave ID: %d", slave_id);
 
-    uint8_t dummy_request = 0x01;
-    esp_err_t err = i2c_master_write_to_device(I2C_MASTER_NUM, I2C_SLAVE_ADDRESS, &dummy_request, 1, pdMS_TO_TICKS(I2C_MASTER_TIMEOUT_MS));
-    if (err != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to send request to slave: %s", esp_err_to_name(err));
-        set_led_color(255, 0, 0); // Red: I2C write error
-        return;
-    }
+        set_led_color(0, 0, 255); // Blue: Attempting communication
 
-    err = i2c_master_read_from_device(I2C_MASTER_NUM, I2C_SLAVE_ADDRESS, buffer, sizeof(buffer), pdMS_TO_TICKS(I2C_MASTER_TIMEOUT_MS));
-    if (err == ESP_OK) {
-        uint8_t slave_id = buffer[1]; // Extract slave ID
-        int32_t temperature_raw;
-        uint32_t humidity_raw;
-        int32_t pressure, raw_weight;
-
-        memcpy(&temperature_raw, &buffer[2], sizeof(int32_t));
-        memcpy(&humidity_raw, &buffer[6], sizeof(uint32_t));
-        memcpy(&pressure, &buffer[10], sizeof(int32_t));
-        memcpy(&raw_weight, &buffer[14], sizeof(int32_t));
-
-        float temperature = (float)temperature_raw / 100.0;
-        float humidity = (float)humidity_raw / 1024.0;
-
-        ESP_LOGI(TAG, "Slave ID: %d, Temperature: %.2f, Humidity: %.2f, Pressure: %" PRId32 ", Raw Weight: %" PRId32,
-                 slave_id, temperature, humidity, pressure, raw_weight);
-
-        if (buffer[0] == 0xAB && buffer[18] == 0xCD) {
-            ESP_LOGI(TAG, "Valid data received!");
-            set_led_color(0, 255, 255); // Cyan: Data valid and ready to send
-            send_data_to_server(slave_id, temperature, humidity, pressure, raw_weight);
-        } else {
-            ESP_LOGW(TAG, "Invalid data: Header/Footer mismatch.");
-            set_led_color(255, 255, 0); // Yellow: Data invalid
+        uint8_t dummy_request = 0x01; // Request header
+        esp_err_t err = i2c_master_write_to_device(I2C_MASTER_NUM, slave_id, &dummy_request, 1, pdMS_TO_TICKS(I2C_MASTER_TIMEOUT_MS));
+        if (err != ESP_OK) {
+            ESP_LOGW(TAG, "Failed to send request to Slave ID: %d, Error: %s", slave_id, esp_err_to_name(err));
+            continue;
         }
-    } else {
-        ESP_LOGE(TAG, "Failed to read from slave: %s", esp_err_to_name(err));
-        set_led_color(255, 0, 0); // Red: I2C read error
+
+        err = i2c_master_read_from_device(I2C_MASTER_NUM, slave_id, buffer, sizeof(buffer), pdMS_TO_TICKS(I2C_MASTER_TIMEOUT_MS));
+        if (err == ESP_OK) {
+            uint8_t received_slave_id = buffer[1]; // Extract slave ID
+            int32_t temperature_raw;
+            uint32_t humidity_raw;
+            int32_t pressure, raw_weight;
+
+            memcpy(&temperature_raw, &buffer[2], sizeof(int32_t));
+            memcpy(&humidity_raw, &buffer[6], sizeof(uint32_t));
+            memcpy(&pressure, &buffer[10], sizeof(int32_t));
+            memcpy(&raw_weight, &buffer[14], sizeof(int32_t));
+
+            float temperature = (float)temperature_raw / 100.0;
+            float humidity = (float)humidity_raw / 1024.0;
+
+            ESP_LOGI(TAG, "Received from Slave ID: %d, Temperature: %.2f, Humidity: %.2f, Pressure: %" PRId32 ", Raw Weight: %" PRId32,
+                     received_slave_id, temperature, humidity, pressure, raw_weight);
+
+            if (buffer[0] == 0xAB && buffer[18] == 0xCD) {
+                ESP_LOGI(TAG, "Valid data received from Slave ID: %d", received_slave_id);
+                set_led_color(0, 255, 255); // Cyan: Data valid and ready to send
+                send_data_to_server(received_slave_id, temperature, humidity, pressure, raw_weight);
+            } else {
+                ESP_LOGW(TAG, "Invalid data from Slave ID: %d", slave_id);
+                set_led_color(255, 255, 0); // Yellow: Data invalid
+            }
+        } else {
+            set_led_color(255, 0, 0); // Red: No response from slave
+            ESP_LOGW(TAG, "No response from Slave ID: %d, Error: %s", slave_id, esp_err_to_name(err));
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(3000)); // Delay between hive ID attempts
     }
 }
 
@@ -230,7 +238,7 @@ void app_main(void)
     i2c_master_init();
 
     while (1) {
-        read_from_slave();
-        vTaskDelay(pdMS_TO_TICKS(5000)); // Delay between requests
+        read_from_slaves();
+        vTaskDelay(pdMS_TO_TICKS(interval)); // Delay between requests
     }
 }
