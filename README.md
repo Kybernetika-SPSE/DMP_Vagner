@@ -20,6 +20,3 @@
 
 ## Použití
 Po úspěšné instalaci systém začne shromažďovat a odesílat data ze senzorů v reálném čase. Uživatelé mohou k těmto datům přistupovat pomocí webového rozhraní, které umožňuje sledovat aktuální stav úlů a analyzovat historická data.
-
-## Licence
-Tento projekt je licencován pod [MIT licencí](LICENSE).
