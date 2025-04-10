@@ -1,0 +1,10 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.espIdfPathWin": "C:\\Users\\lukyv\\v5.3.2\\esp-idf",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "idf.portWin": "COM17",
+    "idf.toolsPathWin": "C:\\Users\\lukyv\\.espressif",
+    "idf.flashType": "JTAG"
+}
