@@ -9,7 +9,7 @@
 #include "led_strip.h"
 #include "esp_rom_sys.h"
 
-uint8_t slave_id = 1; // Replace 1 with the unique ID for this slave
+uint8_t slave_id = 2; // Replace 1 with the unique ID for this slave
 
 #define I2C_SLAVE_SCL_IO          39  // GPIO for I2C clock
 #define I2C_SLAVE_SDA_IO          40  // GPIO for I2C data

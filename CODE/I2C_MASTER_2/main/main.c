@@ -12,8 +12,8 @@
 #include "esp_http_client.h"
 #include "led_strip.h"
 
-#define MAX_HIVE_ID                1
-#define interval                   60000  // Interval between requests in milliseconds
+#define MAX_HIVE_ID                2
+#define interval                   30000  // Interval between requests in milliseconds
 
 #define I2C_MASTER_SCL_IO          38  // GPIO for I2C clock
 #define I2C_MASTER_SDA_IO          39  // GPIO for I2C data
@@ -27,7 +27,7 @@
 
 #define WIFI_SSID                  "This"  // Replace with your Wi-Fi SSID
 #define WIFI_PASS                  "12345679"  // Replace with your Wi-Fi password
-#define WEB_SERVER_URL             "http://smarthives.fun/insert_data.php"  // Replace with your endpoint URL
+#define WEB_SERVER_URL             "http://smarthives.fun/php/insert_data.php"  // Replace with your endpoint URL
 
 static const char *TAG = "I2C_MASTER";
 static led_strip_handle_t led_strip;

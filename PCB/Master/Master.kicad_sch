@@ -4,6 +4,11 @@
 	(generator_version "8.0")
 	(uuid "2e817cb2-1c19-4def-9379-302a7f4d7685")
 	(paper "A3")
+	(title_block
+		(title "Příloha č.2 schéma QUEEN modulu")
+		(date "2025-28-02")
+		(rev "Lukáš Vágner")
+	)
 	(lib_symbols
 		(symbol "BME280:BME280"
 			(pin_names
@@ -10251,9 +10256,9 @@
 		)
 		(uuid "1c25db9d-29eb-4f9a-85c1-414626ce1c0f")
 	)
-	(text "BME280"
+	(text "BME280/BME680"
 		(exclude_from_sim no)
-		(at 124.1355 122.3581 0)
+		(at 131.318 122.428 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -15697,7 +15702,7 @@
 		(dnp no)
 		(uuid "7ca737e4-6510-4eb9-ad76-320a988774df")
 		(property "Reference" "C14"
-			(at 163.83 138.684 0)
+			(at 163.068 138.176 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15706,7 +15711,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at 163.322 140.462 0)
+			(at 162.052 140.462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
